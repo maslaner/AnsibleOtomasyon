@@ -1,0 +1,23 @@
+---
+
+  - hosts: all
+    become: true
+    tasks:
+
+    - name: apache kaldırma
+      yum:
+        name: httpd
+        state: absent
+
+    - name: php kütüphanesi kaldırma
+      yum:
+        name: php
+        state: absent
+      yum:  
+        name: php-curl
+        state: absent
+      yum:
+        name: httpd-devel
+        state: absent
+
+   
