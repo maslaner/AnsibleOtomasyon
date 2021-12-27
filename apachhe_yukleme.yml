@@ -1,0 +1,11 @@
+---
+
+    - hosts: mobile
+      become: true
+      tasks:
+
+      - name: vim yukleme playbook ile kurulumu
+        yum:
+          name: vim
+
+          
