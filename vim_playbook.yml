@@ -1,0 +1,11 @@
+---
+
+    - hosts: all
+      become: true
+      tasks:
+
+      - name: Apache2 yukleme playbook ile kurulumu
+        yum:
+          name: vim
+
+          
