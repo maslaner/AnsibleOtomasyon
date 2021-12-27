@@ -4,7 +4,10 @@
       become: true
       tasks:
 
-      - name: Apache2 yukleme playbook ile kurulumu
+      - name: yum packet index'ini güncelleme
+        yum:
+          update_cache: yes
+      - name: vim yukleme playbook ile kurulumu
         yum:
           name: vim
 

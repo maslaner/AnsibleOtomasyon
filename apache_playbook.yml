@@ -1,0 +1,12 @@
+---
+
+  - hosts: all
+    become: true
+    task:
+
+
+    - name: apache yükleme
+      yum:
+        name: httpd
+
+   
