@@ -7,10 +7,12 @@
     - name: yum packet index'ini güncelleme
       yum:
         update_cache: yes
+    
     - name: apache yükleme
       yum:
         name: httpd
         state: latest
+   
     - name: ensure httpd is running
       service:
         name: httpd 
@@ -21,6 +23,7 @@
         service: http
         permanent: true
         state: enabled
+    
     - name: Restart the firewalld service to load in the firewall changes
       service: 
         name: firewalld 
